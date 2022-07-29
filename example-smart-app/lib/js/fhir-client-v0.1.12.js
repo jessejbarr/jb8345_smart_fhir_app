@@ -17003,7 +17003,7 @@ function completeCodeFlow(params){
       window.history.pushState({}, "", url);
     }
   }
-
+//redirect_uri: state.client.redirect_uri JB8345
   var data = {
       code: params.code,
       grant_type: 'authorization_code',
@@ -17411,7 +17411,7 @@ BBClient.authorize = function(params, errback){
     sessionStorage[state] = JSON.stringify(params);
 
     console.log("sending client reg", params.client);
-
+//"redirect_uri="+encodeURIComponent(client.redirect_uri)+"&"+ JB8345
     var redirect_to=params.provider.oauth2.authorize_uri + "?" + 
       "client_id="+encodeURIComponent(client.client_id)+"&"+
       "response_type="+encodeURIComponent(params.response_type)+"&"+

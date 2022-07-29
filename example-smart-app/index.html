@@ -7,7 +7,19 @@
 
     <link rel='stylesheet' type='text/css' href='./src/css/example-smart-app.css'>
     
+   
+    <!--jb8345     //https://github.com/Alorel/console-log-html/blob/master/README.md   -->
+    <script type="application/javascript" src="//cdn.rawgit.com/Alorel/console-log-html/master/console-log-html.min.js"></script>
+    <ul id="myULContainer"></ul> <!-- I will hold the log messages -->
+    <script type="application/javascript" src="console-log-html.min.js"></script>
+    <script>
+        ConsoleLogHTML.connect(document.getElementById("myULContainer")); // Redirect log messages
+        ConsoleLogHTML.disconnect(); // Stop redirecting
+    </script>
 
+console.log("foo"); // Logs "foo" to HTML
+console.log("Look, some JSON:", {foo: 'bar'}); // Logs "Look, some JSON: Object {"foo":"bar"}" to HTML
+console.skipHtml.log("bar"); // Logs only to the console
     <!--
       Temporarily disable cerner-smart-embeddable-lib
     <link rel='stylesheet' type='text/css' href='./lib/css/cerner-smart-embeddable-lib-1.0.0.min.css'>

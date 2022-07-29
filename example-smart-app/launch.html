@@ -26,7 +26,8 @@
     <!-- https://github.com/cerner/fhir-client-cerner-additions -->
     <script src='./lib/js/fhir-client-cerner-additions-1.0.0.js'></script>
     
-    const delay = ms => new Promise(res => setTimeout(res, ms));
+  
+    const delay = async (ms: number) => new Promise(res => setTimeout(res, ms));
     const yourFunction = async () => {
     await delay(5000);
     console.log("Waited 5s");

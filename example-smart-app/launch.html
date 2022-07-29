@@ -27,14 +27,17 @@
     <script src='./lib/js/fhir-client-cerner-additions-1.0.0.js'></script>
     
   
-    const delay = async (ms: number) => new Promise(res => setTimeout(res, ms));
-    const yourFunction = async () => {
-    await delay(5000);
-    console.log("Waited 5s");
+    function wait(ms){
+   var start = new Date().getTime();
+   var end = start;
+   while(end < start + ms) {
+     end = new Date().getTime();
+    }
+  }
 
-    await delay(5000);
-    console.log("Waited an additional 5s");
-  };
+console.log('before');
+wait(7000);  //7 seconds in milliseconds
+console.log('after');
     
     
     <script>

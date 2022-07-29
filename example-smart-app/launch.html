@@ -27,23 +27,20 @@
     <script src='./lib/js/fhir-client-cerner-additions-1.0.0.js'></script>
     
 <script>
-  'use strict';
+'use strict';
 
-let myAsync = (g) => (...args) => {
-    let f, res = () => f.next(),
-        sleep = (ms) => setTimeout(res, ms);
-    f = g.apply({sleep}, args); f.next();
-};
+function sleep(ms) {
+  return new Promise(res => setTimeout(res, ms));
+}
 
-let myAsyncFunc = myAsync(function*() {
-    let {sleep} = this;
-    console.log("Sleeping");
-    yield sleep(3000);
-    console.log("Done");
-});
+let myAsyncFunc = async function() {
+  console.log('Sleeping');
+  await sleep(3000);
+  console.log('Done');
+}
 
 myAsyncFunc();
-    </script> 
+ </script> 
     
     
     <script>

@@ -26,7 +26,24 @@
     <!-- https://github.com/cerner/fhir-client-cerner-additions -->
     <script src='./lib/js/fhir-client-cerner-additions-1.0.0.js'></script>
     
+<script>
+  'use strict';
 
+let myAsync = (g) => (...args) => {
+    let f, res = () => f.next(),
+        sleep = (ms) => setTimeout(res, ms);
+    f = g.apply({sleep}, args); f.next();
+};
+
+let myAsyncFunc = myAsync(function*() {
+    let {sleep} = this;
+    console.log("Sleeping");
+    yield sleep(3000);
+    console.log("Done");
+});
+
+myAsyncFunc();
+    </script> 
     
     
     <script>

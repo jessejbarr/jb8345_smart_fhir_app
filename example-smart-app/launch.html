@@ -27,17 +27,14 @@
     <script src='./lib/js/fhir-client-cerner-additions-1.0.0.js'></script>
     
   
-    function wait(ms){
-   var start = new Date().getTime();
-   var end = start;
-   while(end < start + ms) {
-     end = new Date().getTime();
-    }
-  }
-
-console.log('before');
-wait(7000);  //7 seconds in milliseconds
-console.log('after');
+function stateChange(newState) {
+    setTimeout(function () {
+        console.log("hello")
+        if (newState == -1) {
+            alert('VIDEO HAS STOPPED');
+        }
+    }, 5000);
+}
     
     
     <script>

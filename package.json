@@ -33,7 +33,7 @@
     "lowdb": "^1.0.0",
     "tape": "^4.7.0",
     "ejs": "^2.5.6"
-  }
+  },
   "keywords": [
     "node",
     "heroku",

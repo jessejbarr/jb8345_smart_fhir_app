@@ -9,7 +9,7 @@ var app = express();
 // viewed at http://localhost:8080
 //res.sendFile(path.join(__dirname + '/index.html'));
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/index.html'));
+    res.sendFile('/example-smart-app/index.html'));
 });
 
 app.listen(port, function () {

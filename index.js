@@ -6,8 +6,8 @@ var path = '/example-smart-app';
 
 var app = express();
 
-const http = require('http')
-const fs = require('fs')
+const http = require('http');
+const fs = require('fs');
 
 const server = http.createServer((req, res) => {
   res.writeHead(200, { 'content-type': 'text/html' })

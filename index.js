@@ -1,6 +1,29 @@
+
+let http = require('http');
+let fs = require('fs');
+
+let handleRequest = (request, response) => {
+    response.writeHead(200, {
+        'Content-Type': 'text/html'
+    });
+    fs.readFile('./example-smart-app/index.html', null, function (error, data) {
+        if (error) {
+            response.writeHead(404);
+            response.write('Whoops! File not found!');
+        } else {
+            response.write(data);
+        }
+        response.end();
+    });
+};
+
+http.createServer(handleRequest).listen(8000);
+
+/** 
 var express = require('express');
 var bodyParser = require('body-parser');
 var request = require('request');
+
 //var port = process.env.PORT || 443
 const path = require('path');
 const router = express.Router();
@@ -13,13 +36,14 @@ var app = express();
 var http = require('http');
 var fs = require('fs');
 
-const PORT=8080; 
-
+const PORT = 8080; 
+console.log("test");
 
 app.use('/', function renderApp(req, res) {
-
+  console.log("in app use");
 //fs.readFile('/example-smart-app/index.html', function (err, html) {
-const filePath = path.resolve(__dirname, '..', '/example-smart-app/index.html', 'index.html');
+  const filePath = path.resolve(__dirname, '..', '/example-smart-app/index.html', 'index.html');
+  console.log(filePath);
     if (err) throw err;    
 
     http.createServer(function(request, response) {  
@@ -28,7 +52,7 @@ const filePath = path.resolve(__dirname, '..', '/example-smart-app/index.html', 
         response.end();  
     }).listen(PORT);
 });
-
+*/
 
 
 

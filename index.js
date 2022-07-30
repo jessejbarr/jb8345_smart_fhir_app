@@ -11,7 +11,8 @@ console.log(process.cwd());
 var app = express();
 
 router.get('/',function(req,res){
-  res.sendFile(path.join(__dirname+'/example-smart-app'));
+ express.static(path.join(__dirname, '/example-smart-app'));
+  //res.sendFile(path.join(__dirname+'/example-smart-app'));
   //__dirname : It will resolve to your project folder.
 });
 app.use('/', router);

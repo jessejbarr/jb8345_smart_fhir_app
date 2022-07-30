@@ -16,6 +16,7 @@
     "lowdb": "^1.0.0",
     "mongodb": "^4.8.1",
     "mongoose": "^6.5.0",
+    "safe-buffer": "^5.2.1"
     "morgan": "~1.10.1",
     "request": "^2.88.0"
   },

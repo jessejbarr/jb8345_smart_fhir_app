@@ -4,7 +4,7 @@ var request = require('request');
 //var port = process.env.PORT || 80
 var path = '/example-smart-app';
 
-//var app = express();
+var app = express();
 
 // viewed at http://localhost:8080
 //res.sendFile(path.join(__dirname + '/index.html'));

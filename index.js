@@ -15,8 +15,11 @@ var fs = require('fs');
 
 const PORT=8080; 
 
-fs.readFile('/example-smart-app/index.html', function (err, html) {
 
+app.use('/', function renderApp(req, res) {
+
+//fs.readFile('/example-smart-app/index.html', function (err, html) {
+const filePath = path.resolve(__dirname, '..', '/example-smart-app/index.html', 'index.html');
     if (err) throw err;    
 
     http.createServer(function(request, response) {  

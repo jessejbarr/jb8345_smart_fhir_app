@@ -6,7 +6,7 @@ let handleRequest = (request, response) => {
     response.writeHead(200, {
         'Content-Type': 'text/html'
     });
-    fs.readFile('./example-smart-app/launch.html', null, function (error, data) {
+    fs.readFile('./example-smart-app/launch-smart-sandbox.html', null, function (error, data) {
         if (error) {
             response.writeHead(404);
             response.write('Whoops! File not found!');

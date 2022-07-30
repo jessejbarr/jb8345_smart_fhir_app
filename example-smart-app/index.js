@@ -9,8 +9,9 @@ var app = express();
 var path = require('/example-smart-app');
 
 // viewed at http://localhost:8080
+//res.sendFile(path.join(__dirname + '/index.html'));
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/index.html'));
+    res.sendFile('/index.html');
 });
 
 app.listen(port, function () {

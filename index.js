@@ -14,16 +14,16 @@ const server = http.createServer((req, res) => {
   fs.createReadStream('/example-smart-app/index.html').pipe(res)
 });
 
-server.listen(process.env.PORT || 3000)
+//server.listen(process.env.PORT || 3000)
 // viewed at http://localhost:8080
 //res.sendFile(path.join(__dirname + '/index.html'));
 //app.get('/', function(req, res) {
 //    res.sendFile('/example-smart-app/index.html');
 //});
 
-app.listen(port, function () {
-	console.log('Server started. Listening on port',port);
-});
+//app.listen(port, function () {
+//	console.log('Server started. Listening on port',port);
+//});
 
 
 

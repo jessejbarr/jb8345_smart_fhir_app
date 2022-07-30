@@ -59,7 +59,7 @@ app.post('/destination/newpatient', function (req, res) {
 
 	  
 	//mongodb connection information
-	let uri = "mongodb://heron8345:2%40wJK7qASVbGwgt@ds031862.mlab.com:31862/heroku_cm016ptg"
+	//let uri = "mongodb://heron8345:"
 	mongoose.connect(uri);
 	let db = mongoose.connection;
 	db.on('error', console.error.bind(console, 'connection error:'));

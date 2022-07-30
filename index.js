@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var request = require('request');
 //var port = process.env.PORT || 80
-var path = require('/example-smart-app');
+var path = '/example-smart-app';
 
 //var app = express();
 

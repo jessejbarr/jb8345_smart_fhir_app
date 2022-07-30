@@ -6,7 +6,8 @@ const path = require('path');
 const router = express.Router();
 //var path = '/example-smart-app';
 
-
+console.log(__dirname);
+console.log(process.cwd());
 var app = express();
 
 router.get('/',function(req,res){

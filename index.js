@@ -1,12 +1,8 @@
-import express from 'express';
-var express = require('express')
-var app = express()
+var express = require('express');
+var app = express();
 var bodyParser = require('body-parser');
 var request = require('request');
 //var port = process.env.PORT || 80
-
-var express = require('express');
-var app = express();
 var path = require('/example-smart-app');
 
 // viewed at http://localhost:8080

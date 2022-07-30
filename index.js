@@ -16,8 +16,12 @@ let handleRequest = (request, response) => {
         response.end();
     });
 };
+
 //.listen(process.env.PORT || 5000)
-http.createServer(handleRequest).listen(process.env.PORT;
+
+const PORT = process.env.PORT || 5000
+
+http.createServer(handleRequest).listen(PORT);
 
 /** 
 var express = require('express');

@@ -4,7 +4,7 @@ var request = require('request');
 //var port = process.env.PORT || 443
 const path = require('path');
 const router = express.Router();
-var path = '/example-smart-app';
+//var path = '/example-smart-app';
 
 
 var app = express();

@@ -6,7 +6,7 @@ var path = require('path');
 //var PORT = 3000;
 const host = '0.0.0.0';
 const PORT = process.env.PORT || 3000;
-app.use(express.static('example-smart-app'))
+app.use(express.static('example-smart-app/'))
 
 // With middleware
 // Without middleware

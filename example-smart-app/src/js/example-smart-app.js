@@ -1,6 +1,7 @@
 (function(window){
-  console.log("trest");
+  
   window.extractData = function() {
+    console.log("test");
     var ret = $.Deferred();
 
     function onError() {

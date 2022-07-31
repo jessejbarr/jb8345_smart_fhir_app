@@ -4,6 +4,8 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var PORT = 3000;
+const host = '0.0.0.0';
+const port = process.env.PORT || 3000;
 app.use(express.static('example-smart-app'))
 
 // With middleware
@@ -18,9 +20,9 @@ app.get('./example-smart-app/fhir_auth.js', function(req, res){
 	res.send("User Page");
 });
 */
-app.listen(PORT, function(err){
+app.listen(PORT,host, function(err){
 	if (err) console.log(err);
-	console.log("Server listening on PORT", PORT);
+	console.log("Server listening on PORT",host, PORT);
 });
 
 

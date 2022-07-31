@@ -1,4 +1,33 @@
 
+
+var express = require('express');
+var app = express();
+var path = require('path');
+var PORT = 3000;
+app.use(express.static('example-smart-app'))
+
+// With middleware
+// Without middleware
+app.get('/', function(req, res){
+  //var fileStream = fs.createReadStream('path_to_dir/staticFile.html');
+  //res.redirect('/example-smart-app/launch-smart-sandbox.html');
+  res.sendFile('/example-smart-app/launch-smart-sandbox.html', { root: path.dirname(require.main.filename) });
+});
+/**
+app.get('./example-smart-app/fhir_auth.js', function(req, res){
+	res.send("User Page");
+});
+*/
+app.listen(PORT, function(err){
+	if (err) console.log(err);
+	console.log("Server listening on PORT", PORT);
+});
+
+
+
+
+
+/*
 let http = require('http');
 let fs = require('fs');
 
@@ -22,7 +51,7 @@ let handleRequest = (request, response) => {
 const PORT = process.env.PORT || 5000
 
 http.createServer(handleRequest).listen(PORT);
-
+*/
 /** 
 var express = require('express');
 var bodyParser = require('body-parser');

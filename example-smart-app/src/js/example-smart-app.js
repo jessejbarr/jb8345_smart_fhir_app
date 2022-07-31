@@ -1,7 +1,7 @@
 (function(window){
   
   window.extractData = function() {
-    console.log("test");
+    console.log("example-smart-app.js");
     var ret = $.Deferred();
 
     function onError() {
@@ -10,6 +10,7 @@
     }
 
     function onReady(smart)  {
+      console.log("onReady");
       if (smart.hasOwnProperty('patient')) {
         var patient = smart.patient;
         var pt = patient.read();

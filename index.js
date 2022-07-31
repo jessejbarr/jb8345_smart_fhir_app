@@ -3,9 +3,9 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-var PORT = 3000;
+//var PORT = 3000;
 const host = '0.0.0.0';
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 app.use(express.static('example-smart-app'))
 
 // With middleware

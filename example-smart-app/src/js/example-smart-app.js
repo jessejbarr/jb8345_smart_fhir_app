@@ -1,4 +1,5 @@
 (function(window){
+  console.log("trest");
   window.extractData = function() {
     var ret = $.Deferred();
 

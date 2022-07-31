@@ -25,10 +25,6 @@ app.listen(PORT,host, function(err){
 	console.log("Server listening on PORT",host, PORT);
 });
 
-
-
-
-
 /*
 let http = require('http');
 let fs = require('fs');

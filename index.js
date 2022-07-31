@@ -6,14 +6,23 @@ var path = require('path');
 //var PORT = 3000;
 const host = '0.0.0.0';
 const PORT = process.env.PORT || 3000;
-app.use(express.static('example-smart-app/'))
+
+//this allowed files in this directory to be used by /.
+//app.use(express.static('example-smart-app/'))
 
 // With middleware
 // Without middleware
 app.get('/', function(req, res){
   //var fileStream = fs.createReadStream('path_to_dir/staticFile.html');
   //res.redirect('/example-smart-app/launch-smart-sandbox.html');
+  
+  // Disable caching for content files
+  
+console.log("appget")
   res.sendFile('/example-smart-app/launch-smart-sandbox.html', { root: path.dirname(require.main.filename) });
+  app.use(express.static('example-smart-app/'))
+  //res.render('/example-smart-app/launch-smart-sandbox.html', { root: path.dirname(require.main.filename) });
+
 });
 /**
 app.get('./example-smart-app/fhir_auth.js', function(req, res){
@@ -120,7 +129,6 @@ app.use('/', function renderApp(req, res) {
 //app.listen(port, function () {
 //	console.log('Server started. Listening on port',port);
 //});
-
 
 
 
